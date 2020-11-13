@@ -1,7 +1,7 @@
-﻿using Blauhaus.Common.Time.Service;
-using Blauhaus.Ioc.Abstractions;
+﻿using Blauhaus.Ioc.Abstractions;
+using Blauhaus.Time.Service;
 
-namespace Blauhaus.Common.Time._Ioc
+namespace Blauhaus.Time._Ioc
 {
     public static class IocServiceExtensions
     {

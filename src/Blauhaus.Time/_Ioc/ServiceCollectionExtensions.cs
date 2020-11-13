@@ -1,7 +1,7 @@
-﻿using Blauhaus.Common.Time.Service;
+﻿using Blauhaus.Time.Service;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Blauhaus.Common.Time._Ioc
+namespace Blauhaus.Time._Ioc
 {
     public static class ServiceCollectionExtensions
     {
