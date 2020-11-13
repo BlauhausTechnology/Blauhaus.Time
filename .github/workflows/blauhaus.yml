@@ -19,7 +19,9 @@ jobs:
         dotnet build ./src/Blauhaus.Time.sln --configuration Release
         dotnet pack ./src/Blauhaus.Time/Blauhaus.Time.csproj -p:PackageVersion=${VERSION_NAME} --no-build --output ./ --configuration Release  
         dotnet pack ./src/Blauhaus.Time.TestHelpers/Blauhaus.Time.TestHelpers.csproj -p:PackageVersion=${VERSION_NAME} --no-build --output ./ --configuration Release  
+        dotnet pack ./src/Blauhaus.Time.Abstractions/Blauhaus.Time.Abstractions.csproj -p:PackageVersion=${VERSION_NAME} --no-build --output ./ --configuration Release  
      - name: Deploy NuGet Package
        run:  |
         dotnet nuget push /home/runner/work/Blauhaus.Time/Blauhaus.Time/Blauhaus.Time.${VERSION_NAME}.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
         dotnet nuget push /home/runner/work/Blauhaus.Time/Blauhaus.Time/Blauhaus.Time.TestHelpers.${VERSION_NAME}.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
+        dotnet nuget push /home/runner/work/Blauhaus.Time/Blauhaus.Time/Blauhaus.Time.Abstractions.${VERSION_NAME}.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
