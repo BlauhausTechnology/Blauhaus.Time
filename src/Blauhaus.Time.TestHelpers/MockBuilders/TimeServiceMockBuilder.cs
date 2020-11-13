@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Blauhaus.TestHelpers.MockBuilders;
-using Blauhaus.Time.Service;
+using Blauhaus.Time.Abstractions;
 
 namespace Blauhaus.Time.TestHelpers.MockBuilders
 {

@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Globalization;
+using Blauhaus.Time.Abstractions;
 using Humanizer;
 
-namespace Blauhaus.Time.Service
+namespace Blauhaus.Time
 {
     public class TimeService : ITimeService
     {

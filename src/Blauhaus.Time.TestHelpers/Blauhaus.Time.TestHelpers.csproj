@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Blauhaus.Time\Blauhaus.Time.csproj" />
+    <ProjectReference Include="..\Blauhaus.Time.Abstractions\Blauhaus.Time.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>

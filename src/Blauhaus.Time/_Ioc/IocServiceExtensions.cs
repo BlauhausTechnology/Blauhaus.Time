@@ -1,5 +1,5 @@
 ﻿using Blauhaus.Ioc.Abstractions;
-using Blauhaus.Time.Service;
+using Blauhaus.Time.Abstractions;
 
 namespace Blauhaus.Time._Ioc
 {

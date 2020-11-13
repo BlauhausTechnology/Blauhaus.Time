@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace Blauhaus.Time.Service
+namespace Blauhaus.Time.Abstractions
 {
     public interface ITimeService
     {

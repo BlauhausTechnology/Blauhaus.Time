@@ -1,4 +1,4 @@
-﻿using Blauhaus.Time.Service;
+﻿using Blauhaus.Time.Abstractions;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Blauhaus.Time._Ioc
