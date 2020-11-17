@@ -11,7 +11,5 @@ namespace Blauhaus.Time.Abstractions
         
         DateTime CurrentLocalTime { get; }
 
-        string GetRelativeTimeString(DateTime utcDateTime, CultureInfo? culture);
-        string GetTimeSpanString(TimeSpan timeSpan, CultureInfo culture, int precision = 1);
     }
 }
