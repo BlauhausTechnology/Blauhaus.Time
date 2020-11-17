@@ -5,9 +5,9 @@ namespace Blauhaus.Time._Ioc
 {
     public static class ServiceCollectionExtensions
     {
-        public static IServiceCollection RegisterTimeService(this IServiceCollection iocService)
+        public static IServiceCollection AddTimeService(this IServiceCollection iocService)
         {
-            iocService.AddScoped<ITimeService, TimeService>();
+            iocService.AddSingleton<ITimeService, TimeService>();
             return iocService;
         }
     }

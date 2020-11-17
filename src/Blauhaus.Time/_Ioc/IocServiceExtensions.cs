@@ -7,7 +7,7 @@ namespace Blauhaus.Time._Ioc
     {
         public static IIocService AddTimeService(this IIocService iocService)
         {
-            iocService.RegisterImplementation<ITimeService, TimeService>();
+            iocService.RegisterImplementation<ITimeService, TimeService>(IocLifetime.Singleton);
             return iocService;
         }
     }
