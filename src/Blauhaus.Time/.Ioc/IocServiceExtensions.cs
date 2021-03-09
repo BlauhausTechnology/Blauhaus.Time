@@ -1,7 +1,7 @@
 ﻿using Blauhaus.Ioc.Abstractions;
 using Blauhaus.Time.Abstractions;
 
-namespace Blauhaus.Time._Ioc
+namespace Blauhaus.Time.Ioc
 {
     public static class IocServiceExtensions
     {

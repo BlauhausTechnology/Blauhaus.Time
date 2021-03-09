@@ -1,7 +1,7 @@
 ﻿using Blauhaus.Time.Abstractions;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Blauhaus.Time._Ioc
+namespace Blauhaus.Time.Ioc
 {
     public static class ServiceCollectionExtensions
     {
