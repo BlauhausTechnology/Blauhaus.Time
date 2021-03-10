@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using Blauhaus.TestHelpers.MockBuilders;
 using Blauhaus.Time.Abstractions;
+using Moq;
 
 namespace Blauhaus.Time.TestHelpers.MockBuilders
 {
@@ -43,6 +45,24 @@ namespace Blauhaus.Time.TestHelpers.MockBuilders
         {
             var queue = new Queue<DateTime>(values);
             Mock.Setup(x => x.CurrentUtcTime).Returns(queue.Dequeue);
+            return this;
+        }
+
+        
+        public TimeServiceMockBuilder Where_GetRelativeTimeString_returns(string value)
+        {
+            Mock.Setup(x => x.GetRelativeTimeString(It.IsAny<DateTime>(), It.IsAny<CultureInfo>()))
+                .Returns(value);
+            
+            return this;
+        }
+
+        
+        public TimeServiceMockBuilder Where_GetTimeSpanString_returns(string value)
+        {
+            Mock.Setup(x => x.GetTimeSpanString(It.IsAny<TimeSpan>(), It.IsAny<CultureInfo>(), It.IsAny<int>()))
+                .Returns(value);
+            
             return this;
         }
 
