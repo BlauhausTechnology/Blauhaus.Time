@@ -8,7 +8,6 @@ namespace Blauhaus.Time.Abstractions
         long CurrentUtcTimestampMs{ get; }
         DateTime CurrentUtcTime { get; }
         DateTimeOffset CurrentUtcOffset { get; }
-        
         DateTime CurrentLocalTime { get; }
 
         string GetRelativeTimeString(DateTime utcDateTime, CultureInfo culture);
