@@ -47,25 +47,7 @@ namespace Blauhaus.Time.TestHelpers.MockBuilders
             Mock.Setup(x => x.CurrentUtcTime).Returns(queue.Dequeue);
             return this;
         }
-
-        
-        public TimeServiceMockBuilder Where_GetRelativeTimeString_returns(string value)
-        {
-            Mock.Setup(x => x.GetRelativeTimeString(It.IsAny<DateTime>(), It.IsAny<CultureInfo>()))
-                .Returns(value);
-            
-            return this;
-        }
-
-        
-        public TimeServiceMockBuilder Where_GetTimeSpanString_returns(string value)
-        {
-            Mock.Setup(x => x.GetTimeSpanString(It.IsAny<TimeSpan>(), It.IsAny<CultureInfo>(), It.IsAny<int>()))
-                .Returns(value);
-            
-            return this;
-        }
-
+ 
 
     }
 }
