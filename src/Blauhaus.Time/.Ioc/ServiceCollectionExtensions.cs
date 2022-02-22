@@ -5,10 +5,10 @@ namespace Blauhaus.Time.Ioc
 {
     public static class ServiceCollectionExtensions
     {
-        public static IServiceCollection AddTimeService(this IServiceCollection iocService)
+        public static IServiceCollection AddTimeService(this IServiceCollection services)
         {
-            iocService.AddSingleton<ITimeService, TimeService>();
-            return iocService;
+            services.AddSingleton<ITimeService, TimeService>();
+            return services;
         }
     }
 }
