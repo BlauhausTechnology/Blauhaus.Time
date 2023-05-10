@@ -47,7 +47,23 @@ namespace Blauhaus.Time.TestHelpers.MockBuilders
             Mock.Setup(x => x.CurrentUtcTime).Returns(queue.Dequeue);
             return this;
         }
- 
+
+        public TimeServiceMockBuilder Where_ToLocalTime_returns(DateTime time)
+        {
+            Mock.Setup(x => x.ToLocalTime(It.IsAny<DateTime>())).Returns(time);
+            Mock.Setup(x => x.ToLocalTime(It.IsAny<DateTimeOffset>())).Returns(time);
+            return this;
+        }
+        public TimeServiceMockBuilder Where_ToLocalTime_returns(DateTime localTime, DateTimeOffset offset)
+        {
+            Mock.Setup(x => x.ToLocalTime(offset)).Returns(localTime);
+            return this;
+        }
+        public TimeServiceMockBuilder Where_ToLocalTime_returns(DateTime localTime, DateTime time)
+        {
+            Mock.Setup(x => x.ToLocalTime(time)).Returns(localTime);
+            return this;
+        }
 
     }
 }
